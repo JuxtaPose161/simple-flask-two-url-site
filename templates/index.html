@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<form class="work-zone rounded border border-2 border-dark p-4" style="background-color: whitesmoke;" action="" method="get">
+    <h1 class="p-3">Сравнение аналитических средств</h1>
+    <select class="form-select" aria-label="Пример выбора по умолчанию" name="type">
+        <option selected disabled>----------</option>
+        {% for type in progs %}
+        <option>{{ type }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit" class="btn btn-primary mt-3">Показать</button>
+</form>
+{% endblock content %}

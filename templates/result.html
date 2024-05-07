@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="rounded border border-2 border-dark p-4" style="background-color: whitesmoke;">
+    <h1 class="px-3 pb-2">Результаты</h1>
+    {% for prog in page %}
+    <p><h5>{{ prog.name }}</h5>{{ prog.result }}</p>
+    {% endfor %}
+    <div class="d-flex">
+        <h4>Лучший: <span class="fw-normal">{{ max_result }}</span></h4>
+    </div>
+    <a class="btn btn-primary mt-3" href="{{ url_for('start_page') }}" role="button">Домой</a>
+</div>
+{% endblock %}
