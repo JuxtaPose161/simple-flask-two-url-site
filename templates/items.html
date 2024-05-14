@@ -12,8 +12,8 @@
                     <h4 class="card-title">{{ prog.name }}</h4>
                     <p class="card-text text-start">{{ prog.description }}</p>
                     <div class="px-5 py-2 form-check text-start text-bg-primary rounded mt-auto">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="{{ prog.id }}">
-                        <label class="form-check-label" for="exampleCheck1">Выбрать</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck{{prog.id}}" name="{{ prog.id }}">
+                        <label class="form-check-label" for="exampleCheck{{prog.id}}">Выбрать</label>
                     </div>
                 </div>
             </div>
