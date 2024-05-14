@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
 from bd import *
-from slugify import slugify
 app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
@@ -22,7 +21,7 @@ def progs_page(type):
         if str(article['id']) in choices:
             new_page.append(article)
     max_result = max(new_page, key=lambda x: x['result'])['name']
-    return render_template('result.html', page=new_page, max_result=max_result)
+    return render_template('result.html',type=type, page=new_page, max_result=max_result)
 
 
 if __name__ == '__main__':

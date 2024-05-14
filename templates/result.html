@@ -9,6 +9,9 @@
     <div class="d-flex">
         <h4>Лучший: <span class="fw-normal">{{ max_result }}</span></h4>
     </div>
-    <a class="btn btn-primary mt-3" href="{{ url_for('start_page') }}" role="button">Домой</a>
+    <div class="d-flex justify-content-around">
+        <a class="btn btn-primary mt-3 mx-2" href="static/files/РАСЧЕТЫ {{ type }}.xlsx" role="button" download>Вычисления</a>
+        <a class="btn btn-primary mt-3 mx-2" href="{{ url_for('start_page') }}" role="button">Домой</a>
+    </div>
 </div>
 {% endblock %}
